@@ -43,11 +43,13 @@ Primary reading pairs exceed WCAG AAA contrast. Navy on muted gold measures `4.9
 
 ## Form behavior
 
+The homepage includes a short quote starter for the club name, work email, event date, and primary service. It passes those details into the complete event brief on `c-contact.html`, where the visitor reviews and finishes the request.
+
 The form sends event details to the local Node server. The server validates the request and stores one JSON record per line in `data/inquiries.jsonl`.
 
 The browser shows a receipt with a reference ID. Phone and email remain visible as fallback contact options. The lead file stays outside the public web routes and is excluded from Git.
 
-This is local capture, not a hosted CRM. Before public launch, connect the same endpoint to durable storage and an email or text alert for Sesha.
+The homepage handoff does not store a lead. The complete form is local capture, not a hosted CRM. On the Vercel site, neither form provides durable storage or an alert. Before public launch, connect the complete form to durable storage and an email or text alert for Sesha.
 
 ## Public-release gates
 

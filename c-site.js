@@ -24,8 +24,20 @@
   const serviceSelect = document.querySelector('#service');
   if (!form || !serviceSelect) return;
 
-  const requestedService = new URLSearchParams(window.location.search).get('service');
+  const query = new URLSearchParams(window.location.search);
+  const requestedService = query.get('service');
   if (requestedService && [...serviceSelect.options].some((option) => option.value === requestedService)) serviceSelect.value = requestedService;
+
+  const prefilledFields = {
+    organization: 'organization',
+    email: 'email',
+    eventDate: 'event-date'
+  };
+  Object.entries(prefilledFields).forEach(([parameter, fieldId]) => {
+    const value = query.get(parameter);
+    const field = document.getElementById(fieldId);
+    if (value && field) field.value = value;
+  });
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();

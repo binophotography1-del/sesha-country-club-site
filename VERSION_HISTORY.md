@@ -2,6 +2,20 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.2.1-homepage-quote-starter
+
+Homepage event-brief handoff.
+
+• Adds a short quote starter directly below the homepage hero.
+• Collects club name, work email, event date, and primary service.
+• Carries all four values into the complete event brief for review.
+• Keeps the storage boundary explicit. The starter does not claim to submit or store a lead.
+• Adds automated coverage for the homepage-to-contact-page handoff.
+
+Tested surfaces: desktop at 1440 pixels, mobile at 390 and 375 pixels, responsive overflow, and all four prefilled fields.
+
+Known limitation: the Vercel deployment still needs hosted form storage and lead notifications. Phone and email remain the working contact paths.
+
 ## v0.2.0-country-club-copy
 
 Country-club positioning and copy release.

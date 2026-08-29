@@ -41,13 +41,29 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
   }));
   await page.screenshot({ path: 'test-artifacts/c-contact-transcript.png', fullPage: true });
 
+  await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
+  await page.fill('#starter-organization', 'Sample Country Club');
+  await page.fill('#starter-email', 'events@example.com');
+  await page.fill('#starter-date', '2026-10-24');
+  await page.selectOption('#starter-service', 'dance');
+  await Promise.all([
+    page.waitForURL(/c-contact\.html\?/),
+    page.getByRole('button', { name: 'Continue my event brief' }).click()
+  ]);
+  const starter = await page.evaluate(() => ({
+    organization: document.querySelector('#organization').value,
+    email: document.querySelector('#email').value,
+    eventDate: document.querySelector('#event-date').value,
+    service: document.querySelector('#service').value
+  }));
+
   await page.goto('http://127.0.0.1:8798/service-dance.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/service-dance.png', fullPage: true });
   await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/variation-c-transcript.png', fullPage: true });
 
   const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== 1);
-  console.log(JSON.stringify({ failures, filter, form, tested: results.length }, null, 2));
+  console.log(JSON.stringify({ failures, filter, form, starter, tested: results.length }, null, 2));
   await browser.close();
-  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled) process.exit(1);
+  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance') process.exit(1);
 })();
