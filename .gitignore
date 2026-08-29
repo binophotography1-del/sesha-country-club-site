@@ -4,3 +4,4 @@ data/inquiries.jsonl
 .env.*
 node_modules/
 npm-debug.log*
+.vercel
