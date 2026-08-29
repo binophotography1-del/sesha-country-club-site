@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## Current main after v0.1.1
+
+Group-chat roster and portfolio update.
+
+• Adds clean Ashwin DJ and Abin camera photos from the Sesha, Abin, and Sidd chat.
+• Updates the current media roster to Charlie, Ashwin, and Abin.
+• Moves Sidd to DJ, MC, music entertainment, and performer sourcing based on the newer team brief.
+• Adds four public Instagram profiles shared for the dance roster.
+• Holds Google Drive reels from the public site until public link access and usage approval are verified.
+
+Tested surfaces: desktop and mobile team page, internal links, service filters, preselected services, and form labeling.
+
 ## v0.1.1-vercel-release
 
 First public Vercel deployment package.

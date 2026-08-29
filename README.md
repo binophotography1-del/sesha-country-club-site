@@ -38,7 +38,7 @@ Primary reading pairs exceed WCAG AAA contrast. Navy on muted gold measures `4.9
 • Services include hosting, MC work, red-carpet interviews, live event coverage, podcast facilitation, entertainment journalism, comedy, improv, games, coaching, dance, photography, videography, livestreaming, DJ services, music-performer sourcing, showcases, weddings, private parties, corporate events, and retreats.
 • The Services filters narrow the list by service lane.
 • Service links preselect the matching option in the inquiry form.
-• People work across multiple lanes. Sesha leads hosting, comedy, coaching, interviews, and production. Rick performs comedy. Yuvhan and Abin lead dance work. Charlie and Sidd handle photo, video, social coverage, and livestream production. The extended roster adds DJs, musicians, teaching artists, comedians, dancers, and other specialists per event.
+• People work across multiple lanes. Sesha leads hosting, comedy, coaching, interviews, and production. Rick performs comedy. Yuvhan and Abin lead dance work. Charlie, Ashwin, and Abin support media work. Sidd supports DJ, MC, music entertainment, and performer sourcing. The extended roster adds musicians, teaching artists, comedians, dancers, and other specialists per event.
 • Video proof will link to YouTube or unlisted YouTube. The site will not host large video files.
 
 ## Form behavior
@@ -53,7 +53,7 @@ This is local capture, not a hosted CRM. Before public launch, connect the same 
 
 • Approved public link for Rick's comedy reel.
 • Approved public dance reel for Yuvhan and Abin.
-• Approved photography and video portfolio links for Charlie and Sidd.
+• Approved photography and video portfolio links for Charlie, Ashwin, and Abin.
 • Rights and preferred credits for every image and clip.
 • Written approval to use the Scarlett Johansson photo as the homepage hero without implying endorsement.
 • Confirmed team roster. Newer group-chat notes conflict with the current media and music assignments.
@@ -73,6 +73,8 @@ The live site uses work-focused assets from the Sesha, Abin, and Sidd group chat
 • Sesha performing comedy.
 • Rick performing stand-up and his portrait.
 • A two-person dance performance and a solo dance performance.
+• Ashwin performing a DJ set.
+• Abin holding a professional camera.
 
 Other celebrity and networking selfies were reviewed but excluded. Large `.mov` files remain off the site. The hosting page links the public Instagram reel shared in the chat.
 
