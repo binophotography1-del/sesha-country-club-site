@@ -1,0 +1,16 @@
+.git/
+.DS_Store
+.env*
+.vercel/
+data/
+node_modules/
+test-artifacts/
+README.md
+VERSION_HISTORY.md
+design-archive.html
+variation-a.html
+variation-b.html
+variation-c.html
+server.mjs
+script.js
+styles.css

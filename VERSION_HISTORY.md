@@ -2,6 +2,17 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.1.1-vercel-release
+
+First public Vercel deployment package.
+
+• Deploys the selected Clear Concierge pages and assets.
+• Excludes the design archive, QA screenshots, local server, and inquiry records from the public package.
+• Adds production security headers and long-lived asset caching.
+• Keeps the GitHub repository private.
+
+Known limitation: the Vercel deployment does not provide durable inquiry storage. Phone and email remain the working contact paths until hosted form storage and alerts are connected.
+
 ## v0.1.0-private-checkpoint
 
 Private collaboration checkpoint.
