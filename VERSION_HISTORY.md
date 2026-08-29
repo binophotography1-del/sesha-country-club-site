@@ -2,7 +2,22 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
-## Current main after v0.1.1
+## v0.2.0-country-club-copy
+
+Country-club positioning and copy release.
+
+• Reframes the homepage around member programming and one point of contact.
+• Rewrites services around club calendars, member socials, cultural programming, workshops, and signature events.
+• Adds club-operations language such as expected attendance, audience fit, event schedule, run of show, and deliverables.
+• Rewrites the event brief and service calls to action in plain language.
+• Removes internal source language, generic creative slogans, and unsupported sales claims.
+• Applies AIDA, copy-editing, De-AI-ify, AntiSlop, and anti-AI writing checks.
+
+Tested surfaces: 40 page and viewport combinations, internal links, responsive overflow, images, service filters, preselected services, and form labeling.
+
+Known limitation: the Vercel deployment still needs hosted form storage and lead notifications. Phone and email remain the working contact paths.
+
+## v0.1.2-roster-assets
 
 Group-chat roster and portfolio update.
 

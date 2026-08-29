@@ -4,7 +4,7 @@ Private collaboration checkpoint for a country-club and private-event booking si
 
 ## Chosen direction
 
-Clear Concierge uses DM Serif Display and IBM Plex Sans. It now uses separate pages:
+Clear Concierge uses DM Serif Display and IBM Plex Sans. The public copy positions Sesha as one point of contact for country-club member programming. It uses separate pages:
 
 • `index.html` is the customer-facing Home page.
 • `c-services.html` is the filterable Services page.
@@ -36,7 +36,7 @@ Primary reading pairs exceed WCAG AAA contrast. Navy on muted gold measures `4.9
 • The site states a 24-hour response time.
 • Sesha's public phone and email appear for direct contact.
 • Services include hosting, MC work, red-carpet interviews, live event coverage, podcast facilitation, entertainment journalism, comedy, improv, games, coaching, dance, photography, videography, livestreaming, DJ services, music-performer sourcing, showcases, weddings, private parties, corporate events, and retreats.
-• The Services filters narrow the list by service lane.
+• The Services filters narrow the list by programming category.
 • Service links preselect the matching option in the inquiry form.
 • People work across multiple lanes. Sesha leads hosting, comedy, coaching, interviews, and production. Rick performs comedy. Yuvhan and Abin lead dance work. Charlie, Ashwin, and Abin support media work. Sidd supports DJ, MC, music entertainment, and performer sourcing. The extended roster adds musicians, teaching artists, comedians, dancers, and other specialists per event.
 • Video proof will link to YouTube or unlisted YouTube. The site will not host large video files.
@@ -56,12 +56,24 @@ This is local capture, not a hosted CRM. Before public launch, connect the same 
 • Approved photography and video portfolio links for Charlie, Ashwin, and Abin.
 • Rights and preferred credits for every image and clip.
 • Written approval to use the Scarlett Johansson photo as the homepage hero without implying endorsement.
-• Confirmed team roster. Newer group-chat notes conflict with the current media and music assignments.
+• Final team approval for the current media, music, and dance assignments.
 • Hosted form storage plus an email or text alert for Sesha.
 • Field-level form errors and focus handling.
 • Final travel range, AV needs, clean-content standard, set lengths, and quote rules.
 
 The discussed claims about social views and completed events remain unpublished because the transcript did not verify the numbers.
+
+## Country-club copy direction
+
+The public pages lead with the needs of general managers, member-experience teams, and event staff:
+
+• Member programming and the club calendar.
+• One point of contact for the roster.
+• Audience, venue, schedule, and run-of-show fit.
+• Expected attendance and service mix in the event brief.
+• Photo, video, livestream, and social deliverables after the event.
+
+The copy avoids unverified club clients, attendance results, testimonials, content-suitability promises, and operational guarantees.
 
 ## Messages asset selection
 
