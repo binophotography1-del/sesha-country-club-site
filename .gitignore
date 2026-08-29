@@ -1,0 +1,6 @@
+data/inquiries.jsonl
+.DS_Store
+.env
+.env.*
+node_modules/
+npm-debug.log*
