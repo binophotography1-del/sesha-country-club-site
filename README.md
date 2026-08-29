@@ -1,12 +1,12 @@
 # Sesha Dasari Event Site
 
-Local-first booking-site prototype for country clubs, corporate events, weddings, and private events.
+Private collaboration checkpoint for a country-club and private-event booking site.
 
 ## Chosen direction
 
 Clear Concierge uses DM Serif Display and IBM Plex Sans. It now uses separate pages:
 
-• `variation-c.html` is Home.
+• `index.html` is the customer-facing Home page.
 • `c-services.html` is the filterable Services page.
 • `c-team.html` is the flexible Team roster.
 • `c-contact.html` is the custom-quote inquiry form.
@@ -14,6 +14,10 @@ Clear Concierge uses DM Serif Display and IBM Plex Sans. It now uses separate pa
 • `service-comedy.html` is Comedy.
 • `service-dance.html` is Dance.
 • `service-media.html` is Photography and Video.
+• `design-archive.html` compares the three early design directions.
+• `variation-a.html`, `variation-b.html`, and `variation-c.html` preserve the original explorations.
+
+See `VERSION_HISTORY.md` for checkpoints, tags, tested surfaces, and open risks.
 
 ## Private-club color system
 
@@ -45,12 +49,16 @@ The browser shows a receipt with a reference ID. Phone and email remain visible 
 
 This is local capture, not a hosted CRM. Before public launch, connect the same endpoint to durable storage and an email or text alert for Sesha.
 
-## Open content needs
+## Public-release gates
 
 • Approved public link for Rick's comedy reel.
 • Approved public dance reel for Yuvhan and Abin.
 • Approved photography and video portfolio links for Charlie and Sidd.
 • Rights and preferred credits for every image and clip.
+• Written approval to use the Scarlett Johansson photo as the homepage hero without implying endorsement.
+• Confirmed team roster. Newer group-chat notes conflict with the current media and music assignments.
+• Hosted form storage plus an email or text alert for Sesha.
+• Field-level form errors and focus handling.
 • Final travel range, AV needs, clean-content standard, set lengths, and quote rules.
 
 The discussed claims about social views and completed events remain unpublished because the transcript did not verify the numbers.
@@ -74,6 +82,6 @@ Other celebrity and networking selfies were reviewed but excluded. Large `.mov` 
 node server.mjs
 ```
 
-Open `http://localhost:8798/variation-c.html`.
+Open `http://localhost:8798/`.
 
 Submitted leads appear in `data/inquiries.jsonl` after the first valid request.

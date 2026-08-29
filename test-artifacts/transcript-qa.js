@@ -2,7 +2,7 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
-  const pages = ['variation-c.html', 'c-services.html', 'c-team.html', 'c-contact.html', 'service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html'];
+  const pages = ['index.html', 'c-services.html', 'c-team.html', 'c-contact.html', 'service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html'];
   const widths = [1440, 1024, 768, 390, 375];
   const results = [];
 
@@ -43,7 +43,7 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
 
   await page.goto('http://127.0.0.1:8798/service-dance.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/service-dance.png', fullPage: true });
-  await page.goto('http://127.0.0.1:8798/variation-c.html', { waitUntil: 'networkidle' });
+  await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/variation-c-transcript.png', fullPage: true });
 
   const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== 1);

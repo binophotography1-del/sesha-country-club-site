@@ -103,7 +103,7 @@ async function captureInquiry(request, response) {
 
 function safeStaticPath(urlPath) {
   const decoded = decodeURIComponent(urlPath);
-  const relativePath = decoded === '/' ? 'variation-c.html' : decoded.replace(/^\/+/, '');
+  const relativePath = decoded === '/' ? 'index.html' : decoded.replace(/^\/+/, '');
   const resolved = path.resolve(root, relativePath);
   const blocked = relativePath.startsWith('.') || relativePath === 'server.mjs' || relativePath.startsWith('data/') || relativePath.startsWith('test-artifacts/');
   if (blocked || !resolved.startsWith(`${root}${path.sep}`)) return null;
