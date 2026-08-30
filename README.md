@@ -1,6 +1,6 @@
 # Sesha Dasari Event Site
 
-Private collaboration checkpoint for a country-club and private-event booking site.
+Private source repository for a country-club and private-event booking site deployed on Netlify.
 
 ## Chosen direction
 
@@ -45,11 +45,11 @@ Primary reading pairs exceed WCAG AAA contrast. Navy on muted gold measures `4.9
 
 The homepage includes a short quote starter for the club name, work email, event date, and primary service. It passes those details into the complete event brief on `c-contact.html`, where the visitor reviews and finishes the request.
 
-The form sends event details to the local Node server. The server validates the request and stores one JSON record per line in `data/inquiries.jsonl`.
+On Netlify, the complete event brief uses native Netlify Forms. Verified submissions appear in the Netlify Forms dashboard and trigger an email notification to `seshadasari@gmail.com`. The form includes a honeypot field and a no-JavaScript success page.
 
-The browser shows a receipt with a reference ID. Phone and email remain visible as fallback contact options. The lead file stays outside the public web routes and is excluded from Git.
+During local development, the form sends event details to the local Node server. The server validates the request and stores one JSON record per line in `data/inquiries.jsonl`. The local lead file stays outside the public web routes and is excluded from Git.
 
-The homepage handoff does not store a lead. The complete form is local capture, not a hosted CRM. On the Vercel site, neither form provides durable storage or an alert. Before public launch, connect the complete form to durable storage and an email or text alert for Sesha.
+The homepage starter does not store a lead by itself. It hands the visitor to the complete brief. The Vercel deployment posts completed briefs to the Netlify form endpoint as a fallback.
 
 ## Public-release gates
 
@@ -59,7 +59,6 @@ The homepage handoff does not store a lead. The complete form is local capture, 
 • Rights and preferred credits for every image and clip.
 • Written approval to use the Scarlett Johansson photo as the homepage hero without implying endorsement.
 • Final team approval for the current media, music, and dance assignments.
-• Hosted form storage plus an email or text alert for Sesha.
 • Field-level form errors and focus handling.
 • Final travel range, AV needs, clean-content standard, set lengths, and quote rules.
 
@@ -101,3 +100,9 @@ node server.mjs
 Open `http://localhost:8798/`.
 
 Submitted leads appear in `data/inquiries.jsonl` after the first valid request.
+
+## Netlify deployment
+
+`scripts/package-netlify.sh` creates the curated production directory configured by `netlify.toml`. It includes only the selected public pages, scripts, styles, headers, and approved assets.
+
+Production: `https://sesha-country-club-site.netlify.app/`

@@ -39,6 +39,13 @@
     if (value && field) field.value = value;
   });
 
+  const isLocal = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  const isNetlify = window.location.hostname.endsWith('.netlify.app');
+  if (!isLocal && !isNetlify) {
+    form.action = 'https://sesha-country-club-site.netlify.app/thanks.html';
+    return;
+  }
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
@@ -46,7 +53,8 @@
     const submitButton = form.querySelector('button[type="submit"]');
     const status = document.querySelector('#form-status');
     const originalButtonText = submitButton.textContent;
-    const data = Object.fromEntries(new FormData(form).entries());
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
     const selectedLabel = serviceSelect.options[serviceSelect.selectedIndex].text;
     const payload = { ...data, serviceLabel: selectedLabel, sourcePage: `${window.location.pathname}${window.location.search}` };
 
@@ -56,19 +64,35 @@
     status.textContent = 'Sending your event details…';
 
     try {
-      const response = await fetch('/api/inquiries', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      const result = await response.json();
-      if (!response.ok) throw new Error(result.error || 'The request did not go through.');
+      let response;
+      let receipt = '';
+
+      if (isLocal) {
+        response = await fetch('/api/inquiries', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.error || 'The request did not go through.');
+        receipt = result.id ? ` Reference: ${result.id}.` : '';
+      } else {
+        const netlifyData = new URLSearchParams();
+        Object.entries(payload).forEach(([key, value]) => netlifyData.set(key, value));
+        netlifyData.set('form-name', form.getAttribute('name'));
+        response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: netlifyData.toString()
+        });
+        if (!response.ok) throw new Error('The request did not go through.');
+      }
 
       const preservedService = serviceSelect.value;
       form.reset();
       serviceSelect.value = preservedService;
       status.className = 'form-status is-success';
-      status.textContent = `Thanks. Your request was received. Reference: ${result.id}. Sesha will reply within 24 hours.`;
+      status.textContent = `Thanks. Your event brief was received.${receipt} Sesha will reply within 24 hours.`;
       status.focus();
     } catch (error) {
       status.className = 'form-status is-error';

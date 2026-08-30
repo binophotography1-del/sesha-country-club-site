@@ -2,7 +2,7 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
-  const pages = ['index.html', 'c-services.html', 'c-team.html', 'c-contact.html', 'service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html'];
+  const pages = ['index.html', 'c-services.html', 'c-team.html', 'c-contact.html', 'thanks.html', 'service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html'];
   const widths = [1440, 1024, 768, 390, 375];
   const results = [];
 
@@ -35,8 +35,8 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
   await page.goto('http://127.0.0.1:8798/c-contact.html?service=dance', { waitUntil: 'networkidle' });
   const form = await page.evaluate(() => ({
     selected: document.querySelector('#service').value,
-    controls: document.querySelectorAll('input, select, textarea').length,
-    labeled: [...document.querySelectorAll('input, select, textarea')].filter((control) => control.labels && control.labels.length).length,
+    controls: document.querySelectorAll('input:not([type="hidden"]), select, textarea').length,
+    labeled: [...document.querySelectorAll('input:not([type="hidden"]), select, textarea')].filter((control) => control.labels && control.labels.length).length,
     required: [...document.querySelectorAll('[required]')].map((control) => control.id)
   }));
   await page.screenshot({ path: 'test-artifacts/c-contact-transcript.png', fullPage: true });

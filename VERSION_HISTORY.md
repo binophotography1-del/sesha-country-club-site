@@ -2,6 +2,23 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.0-netlify-forms
+
+Native hosted lead capture release.
+
+• Deploys the selected public site to Netlify.
+• Adds native Netlify Forms capture for the complete event brief.
+• Stores verified submissions in the Netlify dashboard.
+• Sends verified-submission email alerts to `seshadasari@gmail.com`.
+• Adds a honeypot field, AJAX success state, and no-JavaScript thank-you page.
+• Adds a curated Netlify production package and security headers.
+• Keeps local JSONL capture for development.
+• Routes completed briefs from non-Netlify production hosts into Netlify Forms.
+
+Tested surfaces: 45 page and viewport combinations, homepage-to-brief prefill, production form detection, all 11 detected fields, honeypot recognition, live success state, and notification-hook configuration.
+
+QA note: the automated headless submission reached Netlify and updated the form timestamp, then Netlify excluded it from verified submissions as automation. No QA notification was sent to Sesha.
+
 ## v0.2.1-homepage-quote-starter
 
 Homepage event-brief handoff.

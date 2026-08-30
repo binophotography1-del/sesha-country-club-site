@@ -1,0 +1,9 @@
+[build]
+  command = "bash scripts/package-netlify.sh"
+  publish = "netlify-dist"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true

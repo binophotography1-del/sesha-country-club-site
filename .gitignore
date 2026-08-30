@@ -5,3 +5,7 @@ data/inquiries.jsonl
 node_modules/
 npm-debug.log*
 .vercel
+
+# Local Netlify folder
+.netlify
+netlify-dist/
