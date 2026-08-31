@@ -54,7 +54,24 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
     organization: document.querySelector('#organization').value,
     email: document.querySelector('#email').value,
     eventDate: document.querySelector('#event-date').value,
-    service: document.querySelector('#service').value
+    service: document.querySelector('#service').value,
+    hash: window.location.hash,
+    formTarget: Boolean(document.querySelector('#event-brief'))
+  }));
+
+  const ctaPages = ['service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html', 'service-music.html'];
+  const ctaRouting = [];
+  for (const path of ctaPages) {
+    await page.goto(`http://127.0.0.1:8798/${path}`, { waitUntil: 'networkidle' });
+    const routes = await page.evaluate(() => [...document.querySelectorAll('.nav-action, .primary-button')].map((link) => link.getAttribute('href')));
+    ctaRouting.push({ path, routes, allReachForm: routes.every((route) => route && route.includes('#event-brief')) });
+  }
+
+  await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
+  const homeRouting = await page.evaluate(() => ({
+    hero: document.querySelector('.hero-c .primary-button').getAttribute('href'),
+    starterTarget: Boolean(document.querySelector('#home-event-brief')),
+    action: document.querySelector('.home-quote-form').getAttribute('action')
   }));
 
   await page.goto('http://127.0.0.1:8798/service-dance.html', { waitUntil: 'networkidle' });
@@ -64,7 +81,7 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
 
   const pagesWithoutCurrentNav = new Set(['c-services.html', 'c-team.html']);
   const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== (pagesWithoutCurrentNav.has(item.path) ? 0 : 1));
-  console.log(JSON.stringify({ failures, filter, form, starter, tested: results.length }, null, 2));
+  console.log(JSON.stringify({ failures, filter, form, starter, ctaRouting, homeRouting, tested: results.length }, null, 2));
   await browser.close();
-  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance') process.exit(1);
+  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance' || starter.hash !== '#event-brief' || !starter.formTarget || ctaRouting.some((item) => !item.allReachForm) || homeRouting.hero !== '#home-event-brief' || !homeRouting.starterTarget || homeRouting.action !== 'c-contact.html#event-brief') process.exit(1);
 })();

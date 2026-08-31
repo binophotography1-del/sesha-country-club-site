@@ -49,6 +49,8 @@ The selected public direction uses no blue or red. Charcoal text on muted gold m
 
 The homepage includes a short quote starter for the club name, work email, event date, and primary service. It passes those details into the complete event brief on `c-contact.html`, where the visitor reviews and finishes the request.
 
+Primary inquiry CTAs use stable form anchors. Homepage hero actions scroll to the starter brief, while service-specific actions open the full form with the matching service preselected.
+
 On Netlify, the complete event brief uses native Netlify Forms. Verified submissions appear in the Netlify Forms dashboard and trigger an email notification to `seshadasari@gmail.com`. The form includes a honeypot field and a no-JavaScript success page.
 
 During local development, the form sends event details to the local Node server. The server validates the request and stores one JSON record per line in `data/inquiries.jsonl`. The local lead file stays outside the public web routes and is excluded from Git.

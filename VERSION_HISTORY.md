@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.11-form-cta-routing
+
+Inquiry-flow routing release.
+
+• Adds stable anchors for the homepage starter brief and full inquiry form.
+• Routes the homepage hero CTA directly to the starter brief on the same page.
+• Routes service, navigation, footer, and closing CTAs directly to the full form.
+• Preserves service preselection for hosting, comedy, dance, media, livestream, music, podcast, coaching, and bundled-event requests.
+• Keeps informational roster, portfolio, phone, email, and Reel links focused on their original purpose.
+
+Tested surfaces: CTA destinations, anchor scrolling, homepage-to-form field handoff, service preselection, desktop and mobile layout, responsive overflow, form labels, production packaging, and live deployment.
+
 ## v0.3.10-dance-lead-names
 
 Dance-lead naming release.
