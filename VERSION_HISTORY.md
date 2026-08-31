@@ -2,6 +2,17 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.9-club-calendar-headline
+
+Country-club hero copy release.
+
+• Replaces the abstract “one point of contact” headline with “Member programming for your club calendar.”
+• Uses terminology repeated by private-club event and member-experience teams.
+• Keeps the coordinated-team mechanism in the subhead.
+• Avoids promising attendance, satisfaction, or member engagement without measured proof.
+
+Tested surfaces: desktop and mobile hero wrapping, navigation, image loading, responsive overflow, public-page checks, production packaging, and live deployment.
+
 ## v0.3.8-dance-instagram-reel
 
 Dance Reel preview release.
