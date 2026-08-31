@@ -42,7 +42,7 @@ The selected public direction uses no blue or red. Charcoal text on muted gold m
 • Services include hosting, MC work, red-carpet interviews, live event coverage, podcast facilitation, entertainment journalism, comedy, improv, games, coaching, dance, photography, videography, livestreaming, DJ services, music-performer sourcing, showcases, weddings, private parties, corporate events, and retreats.
 • The Services filters narrow the list by programming category.
 • Service links preselect the matching option in the inquiry form.
-• People work across multiple lanes. Sesha leads hosting, comedy, coaching, interviews, and production. Rick performs comedy. Yuvhan and Abin lead dance work. Charlie, Ashwin, and Abin support media work. Sidd supports DJ, MC, music entertainment, and performer sourcing. The extended roster adds musicians, teaching artists, comedians, dancers, and other specialists per event.
+• People work across multiple lanes. Sesha leads hosting, comedy, coaching, interviews, and production. Rick performs comedy. Yuvhan Suresh and Abin Thomas lead dance work. Charlie, Ashwin, and Abin Thomas support media work. Sidd supports DJ, MC, music entertainment, and performer sourcing. The extended roster adds musicians, teaching artists, comedians, dancers, and other specialists per event.
 • Video proof will link to YouTube or unlisted YouTube. The site will not host large video files.
 
 ## Form behavior

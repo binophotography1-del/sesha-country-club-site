@@ -2,6 +2,17 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.10-dance-lead-names
+
+Dance-lead naming release.
+
+• Updates Abin's public name to Abin Thomas across the Dance, Services, and Team pages.
+• Updates Yuvhan's public name to Yuvhan Suresh across the Dance, Services, and Team pages.
+• Leaves Jai's surname unclaimed until it is confirmed directly.
+• Keeps the three approved-headshot placements as honest placeholders.
+
+Tested surfaces: public-name consistency, desktop and mobile layout, navigation, image loading, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.9-club-calendar-headline
 
 Country-club hero copy release.
