@@ -90,6 +90,7 @@ The live site uses work-focused assets from the Sesha, Abin, and Sidd group chat
 • Sesha performing comedy.
 • Rick performing stand-up and his portrait.
 • A two-person dance performance and a solo dance performance.
+• A wide ensemble dance performance with a choreographed lift.
 • Ashwin performing a DJ set.
 • Abin holding a professional camera.
 

@@ -2,6 +2,17 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.3-dance-ensemble-photo
+
+Dance proof update.
+
+• Adds the supplied ensemble performance photo to the production asset set.
+• Places it on the Dance page as live-stage proof.
+• Uses factual alt text without identifying unverified performers.
+• Adds event-planning copy for performer count, performance length, stage needs, and audience participation.
+
+Tested surfaces: image loading, desktop and mobile Dance pages, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.2-ivory-gold-palette
 
 Selected public-site palette release.
