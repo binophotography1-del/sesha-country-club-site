@@ -2,6 +2,17 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.6-team-hero-sesha-scarlett
+
+Team-page hero update.
+
+• Uses the existing higher-resolution Sesha Dasari and Scarlett Johansson image as the Team-page hero.
+• Adds a Team-specific crop so both subjects remain visible on desktop and mobile.
+• Updates the image dimensions and alt text to match the selected asset.
+• Leaves the two requested Team-page placeholder frames unchanged.
+
+Tested surfaces: desktop and mobile Team-page crops, responsive overflow, image loading, public-page checks, production packaging, and live deployment.
+
 ## v0.3.5-team-photo-placeholders
 
 Interim Team-page asset correction.
