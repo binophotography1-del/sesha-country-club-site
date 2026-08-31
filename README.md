@@ -87,6 +87,8 @@ The live site uses work-focused assets from the Sesha, Abin, and Sidd group chat
 • Sesha holding a microphone on a live red carpet.
 • Sesha actively interviewing a red-carpet guest.
 • Sesha photographed with Scarlett Johansson, selected by the team for the homepage hero.
+• Sesha speaking with a guest beside a red-carpet media line.
+• Sesha at a PaleyFest media line and holding a microphone beside an outdoor red carpet.
 • Sesha performing comedy.
 • Rick performing stand-up and his portrait.
 • A two-person dance performance and a solo dance performance.

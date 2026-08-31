@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.4-sesha-red-carpet-montage
+
+Sesha hosting and red-carpet proof update.
+
+• Adds two supplied red-carpet images to the production asset set.
+• Reuses the higher-resolution existing Scarlett Johansson and outdoor microphone images instead of storing duplicates.
+• Builds a responsive four-image montage on the Hosting page.
+• Keeps Sesha as the visual focus and pairs the montage with factual hosting proof.
+• Uses image-specific alt text and lazy loading.
+
+Tested surfaces: image loading, desktop and mobile Hosting pages, responsive overflow, all public-page checks, production packaging, and live deployment.
+
 ## v0.3.3-dance-ensemble-photo
 
 Dance proof update.
