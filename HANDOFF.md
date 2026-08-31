@@ -5,7 +5,7 @@ This file is the operating guide for the Sesha Dasari event site.
 ## Current state
 
 • Source of truth: the `main` branch in the private GitHub repository.
-• Current release tag: `v0.3.1-abin-handoff`.
+• Current release tag: `v0.3.2-ivory-gold-palette`.
 • Production site: https://sesha-country-club-site.netlify.app/
 • Netlify project: https://app.netlify.com/projects/sesha-country-club-site
 • Netlify Forms: https://app.netlify.com/projects/sesha-country-club-site/forms
@@ -118,6 +118,7 @@ Never place Netlify tokens, email passwords, lead exports, or private contact da
 • Keep large video files outside Git. Link approved YouTube, Instagram, or hosted video pages.
 • The Scarlett Johansson image requires written usage approval. Avoid language that implies endorsement.
 • Keep Sesha as the main contact. Team members may serve more than one service lane.
+• Keep the selected palette to ivory, charcoal, cream, and restrained gold. Do not reintroduce blue or red without team approval.
 
 ## Rollback
 

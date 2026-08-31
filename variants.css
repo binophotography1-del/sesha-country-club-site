@@ -40,3 +40,17 @@
 
 /* Private-club palette accessibility overrides */
 .variant-c .page-paths a:hover,.variant-c .page-paths a:focus-visible{color:var(--ink)}.variant-c .form-field input,.variant-c .form-field select,.variant-c .form-field textarea{color:var(--ink)}
+
+/* Ivory, charcoal, cream, and gold production palette */
+.variant-c{--navy:#1c1c1c;--paper:#faf9f6;--yellow:#c5a46d;--burgundy:#c5a46d;--ink:#1c1c1c;background:#faf9f6;color:#1c1c1c;color-scheme:light}
+.variant-c .site-top,.variant-c .hero-c,.variant-c .inner-hero,.variant-c .contact-copy,.variant-c .service-detail-hero,.variant-c .quote-hero{background:#1c1c1c;color:#faf9f6}
+.variant-c .site-top,.variant-c footer{border-color:#c5a46d}
+.variant-c .nav-action,.variant-c .primary-button{background:#c5a46d;color:#1c1c1c;border-color:#c5a46d}
+.variant-c .closing-c .primary-button,.variant-c .inner-cta .primary-button{background:#1c1c1c;color:#faf9f6;border-color:#1c1c1c}
+.variant-c .lead-c,.variant-c .team-page-hero,.variant-c .brief-card,.variant-c .service-card,.variant-c .media-preview,.variant-c .quote-form,.variant-c .proof-strip,.variant-c .photo-proof,.variant-c .roster-card,.variant-c .performer-pair,.variant-c .media-gallery,.variant-c .home-quote-form{background:#f4efe5}
+.variant-c footer{background:#1c1c1c;color:#faf9f6;border-top:4px solid #c5a46d}
+.variant-c .media-placeholder{background:linear-gradient(135deg,#1c1c1c,#3b332b);color:#faf9f6;border-color:#c5a46d}
+.variant-c .form-field input,.variant-c .form-field select,.variant-c .form-field textarea{border-color:#6b6256;background:#faf9f6;color:#1c1c1c}
+.variant-c .privacy-note{color:#5f554b}
+.variant-c .form-status.is-success,.variant-c .form-status.is-error{border-left-color:#9b7a42;background:#f4efe5;color:#1c1c1c}
+.variant-c :focus-visible{outline:3px solid #faf9f6;box-shadow:0 0 0 6px #c5a46d}

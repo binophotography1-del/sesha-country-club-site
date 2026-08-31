@@ -27,11 +27,11 @@ See `VERSION_HISTORY.md` for checkpoints, tags, tested surfaces, and open risks.
 
 • Warm ivory `#FAF9F6` is the main background.
 • Charcoal `#1C1C1C` is the main reading color.
-• Deep navy `#23395B` carries navigation, hero sections, and selected states.
-• Burgundy `#7A263A` marks quote and booking actions.
-• Muted gold `#C5A46D` is limited to borders, cards, and large accent sections.
+• Cream `#F4EFE5` separates cards, forms, and proof sections from the page.
+• Muted gold `#C5A46D` marks quote actions, selected states, borders, and restrained accents.
+• Charcoal carries navigation, hero sections, footers, and secondary actions.
 
-Primary reading pairs exceed WCAG AAA contrast. Navy on muted gold measures `4.93:1` and is reserved for large or bold interface text. Color does not carry meaning without text, borders, or state labels.
+The selected public direction uses no blue or red. Charcoal text on muted gold measures about `7.2:1`. Ivory text on charcoal measures about `16.2:1`. Color does not carry meaning without text, borders, or state labels.
 
 ## Transcript-confirmed decisions
 

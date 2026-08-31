@@ -2,6 +2,19 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.2-ivory-gold-palette
+
+Selected public-site palette release.
+
+• Removes visible navy and burgundy from the selected public direction.
+• Uses warm ivory for page space and cream for cards, forms, and proof sections.
+• Uses charcoal for text, navigation, major hero contrast, footers, and secondary actions.
+• Reserves muted gold for primary actions, selected states, borders, and restrained accents.
+• Restyles form feedback without red or green status fills while retaining text labels.
+• Keeps focus rings and form controls visible against each surface.
+
+Tested surfaces: desktop and mobile screenshots, internal navigation, service filters, form controls, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.1-abin-handoff
 
 Operational handoff release. This release does not change the public site.
