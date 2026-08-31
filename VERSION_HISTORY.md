@@ -2,6 +2,19 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.1-abin-handoff
+
+Operational handoff release. This release does not change the public site.
+
+• Adds one takeover guide for Abin.
+• Documents the source map, local setup, browser QA, and Git workflow.
+• Records the manual Netlify deployment and verification steps.
+• Defines form ownership, data boundaries, asset rules, and rollback steps.
+• Lists the GitHub, Netlify, lead-data, and approval access Abin still needs.
+• Records the remaining release risks and operating gaps.
+
+Tested surfaces: documentation links, production packaging, Git whitespace checks, and repository status.
+
 ## v0.3.0-netlify-forms
 
 Native hosted lead capture release.

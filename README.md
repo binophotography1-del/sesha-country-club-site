@@ -2,6 +2,10 @@
 
 Private source repository for a country-club and private-event booking site deployed on Netlify.
 
+## Team handoff
+
+Start with `HANDOFF.md` before editing or deploying. It covers the project map, local QA, Netlify release process, form ownership, access requirements, rollback, and open risks.
+
 ## Chosen direction
 
 Clear Concierge uses DM Serif Display and IBM Plex Sans. The public copy positions Sesha as one point of contact for country-club member programming. It uses separate pages:
