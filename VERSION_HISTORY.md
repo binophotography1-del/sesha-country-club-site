@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.8-dance-instagram-reel
+
+Dance Reel preview release.
+
+• Adds the supplied Instagram Reel to the Dance page.
+• Uses the approved solo-stage image as a fast, consistent preview thumbnail.
+• Opens the Reel in a new tab without loading Instagram tracking scripts inside the site.
+• Labels the destination and external-tab behavior for screen-reader users.
+• Avoids unverified performer or Reel-content claims because Instagram blocked metadata fetching.
+
+Tested surfaces: Reel URL response, desktop and mobile preview layout, keyboard focus, external-link attributes, public-page checks, production packaging, and live deployment.
+
 ## v0.3.7-sesha-service-tabs
 
 Direct-message requirements release.
