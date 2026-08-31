@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.5-team-photo-placeholders
+
+Interim Team-page asset correction.
+
+• Removes the incorrect dance image from the Yuvhan and Abin roster card.
+• Removes the incorrect second image from the lower Team-page proof section.
+• Replaces both with deliberate ivory, cream, charcoal, and gold placeholder frames.
+• Labels the missing assets without implying that a broken image failed to load.
+• Adds both replacement images to the public-release gate.
+
+Tested surfaces: desktop and mobile Team pages, responsive overflow, semantic structure, internal links, public-page checks, production packaging, and live deployment.
+
 ## v0.3.4-sesha-red-carpet-montage
 
 Sesha hosting and red-carpet proof update.

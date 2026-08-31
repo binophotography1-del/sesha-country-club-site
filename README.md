@@ -59,6 +59,8 @@ The homepage starter does not store a lead by itself. It hands the visitor to th
 
 • Approved public link for Rick's comedy reel.
 • Approved public dance reel for Yuvhan and Abin.
+• Approved replacement image for the Yuvhan and Abin Team card.
+• Approved replacement image for the second Team-page proof frame.
 • Approved photography and video portfolio links for Charlie, Ashwin, and Abin.
 • Rights and preferred credits for every image and clip.
 • Written approval to use the Scarlett Johansson photo as the homepage hero without implying endorsement.
