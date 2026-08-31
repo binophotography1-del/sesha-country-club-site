@@ -2,7 +2,7 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
-  const pages = ['index.html', 'c-services.html', 'c-team.html', 'c-contact.html', 'thanks.html', 'service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html'];
+  const pages = ['index.html', 'c-services.html', 'c-team.html', 'c-contact.html', 'thanks.html', 'service-hosting.html', 'service-comedy.html', 'service-dance.html', 'service-media.html', 'service-music.html'];
   const widths = [1440, 1024, 768, 390, 375];
   const results = [];
 
@@ -62,7 +62,8 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
   await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/variation-c-transcript.png', fullPage: true });
 
-  const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== 1);
+  const pagesWithoutCurrentNav = new Set(['c-services.html', 'c-team.html']);
+  const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== (pagesWithoutCurrentNav.has(item.path) ? 0 : 1));
   console.log(JSON.stringify({ failures, filter, form, starter, tested: results.length }, null, 2));
   await browser.close();
   if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance') process.exit(1);

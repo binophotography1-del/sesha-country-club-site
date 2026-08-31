@@ -22,6 +22,7 @@ cp \
   "$project_dir/service-comedy.html" \
   "$project_dir/service-dance.html" \
   "$project_dir/service-media.html" \
+  "$project_dir/service-music.html" \
   "$project_dir/variants.css" \
   "$project_dir/c-site.js" \
   "$project_dir/_headers" \

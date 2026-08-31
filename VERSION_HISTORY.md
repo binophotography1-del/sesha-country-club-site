@@ -2,6 +2,21 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.7-sesha-service-tabs
+
+Direct-message requirements release.
+
+• Replaces the generic top navigation with Comedy, Dance, Visuals, Music, Hosting, and Inquiry.
+• Uses a six-column desktop row and a labeled three-by-two mobile grid without horizontal scrolling.
+• Adds a complete Music service page.
+• Names Abin, Yuvhan, and Jai as the three lead choreographers and reserves separate approved-headshot placements.
+• Updates the visual media team to Ashwin, Charlie, and Sidd.
+• Adds honest placeholders for Sesha's comedy reel, the combined Rick reel, and the celebrity hosting reel.
+• Preserves the approved ivory, charcoal, cream, and gold palette.
+• Records the pre-change source at `checkpoint-before-sesha-direct-messages-2026-08-31`.
+
+Tested surfaces: 50 page and viewport combinations, service filtering, homepage brief handoff, form labels, desktop and mobile navigation, image loading, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.6-team-hero-sesha-scarlett
 
 Team-page hero update.

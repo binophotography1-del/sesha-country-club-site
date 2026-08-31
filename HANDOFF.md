@@ -5,7 +5,7 @@ This file is the operating guide for the Sesha Dasari event site.
 ## Current state
 
 • Source of truth: the `main` branch in the private GitHub repository.
-• Current release tag: `v0.3.6-team-hero-sesha-scarlett`.
+• Current release tag: `v0.3.7-sesha-service-tabs`.
 • Production site: https://sesha-country-club-site.netlify.app/
 • Netlify project: https://app.netlify.com/projects/sesha-country-club-site
 • Netlify Forms: https://app.netlify.com/projects/sesha-country-club-site/forms
@@ -20,7 +20,7 @@ GitHub access and Netlify access are separate. Abin needs both to own the full r
 • `c-services.html`: filterable services page.
 • `c-team.html`: team roster and service assignments.
 • `c-contact.html`: complete event brief and Netlify form.
-• `service-*.html`: individual service pages.
+• `service-*.html`: individual Comedy, Dance, Visuals, Music, and Hosting pages.
 • `c-site.js`: shared navigation, service filters, and form behavior.
 • `variants.css`: shared public-site styles and color tokens.
 • `assets/`: approved web images.
@@ -146,6 +146,9 @@ For a production rollback, use the Netlify Deploys page to publish the last know
 
 ## Open items
 
+• Replace the Comedy and Hosting reel placeholders after Sesha supplies durable public video links or approved hosted files.
+• Confirm whether Abin already combined Rick's three comedy clips before creating a second edit.
+• Replace the Abin, Yuvhan, and Jai headshot placeholders after approved portraits and preferred full names arrive.
 • Connect GitHub to Netlify if the team wants automatic deploys after merges.
 • Connect a custom domain when the team selects one.
 • Confirm the Netlify notification email reaches Sesha outside the test environment.
