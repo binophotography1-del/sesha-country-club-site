@@ -106,10 +106,18 @@ Other celebrity and networking selfies were reviewed but excluded. Large `.mov` 
 ## Run
 
 ```bash
-node server.mjs
+npm install
+npx playwright install chromium
+npm start
 ```
 
 Open `http://localhost:8798/`.
+
+Run the browser QA in a second terminal while the local server is running:
+
+```bash
+npm test
+```
 
 Submitted leads appear in `data/inquiries.jsonl` after the first valid request.
 

@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.18-collaborator-handoff
+
+Portable collaborator setup release.
+
+• Adds standard npm commands for installing dependencies, running the local server, and executing browser QA.
+• Replaces the machine-specific Playwright path with the repository dependency.
+• Updates the browser QA expectations for the two-tab navigation.
+• Refreshes the tracked QA screenshots to match the current public pages.
+• Expands the setup instructions for a fresh collaborator checkout.
+
+Tested surfaces: fresh npm dependency install, local server startup, 50 responsive page checks, service filtering, form handoff, service-specific CTA routing, hosting-reel proof, and clean Git diff validation.
+
 ## v0.3.17-two-tab-navigation
 
 Navigation and hero-copy release.

@@ -1,0 +1,17 @@
+{
+  "name": "sesha-country-club-site",
+  "version": "0.3.18",
+  "private": true,
+  "description": "Country-club and private-event booking site for Sesha Dasari",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test-artifacts/transcript-qa.js",
+    "package:netlify": "bash scripts/package-netlify.sh"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

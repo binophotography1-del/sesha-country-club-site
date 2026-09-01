@@ -1,4 +1,4 @@
-const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const { chromium } = require('playwright');
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
@@ -90,7 +90,15 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
   await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/variation-c-transcript.png', fullPage: true });
 
-  const pagesWithoutCurrentNav = new Set(['c-services.html', 'c-team.html']);
+  const pagesWithoutCurrentNav = new Set([
+    'c-team.html',
+    'thanks.html',
+    'service-hosting.html',
+    'service-comedy.html',
+    'service-dance.html',
+    'service-media.html',
+    'service-music.html'
+  ]);
   const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== (pagesWithoutCurrentNav.has(item.path) ? 0 : 1));
   console.log(JSON.stringify({ failures, filter, form, starter, ctaRouting, homeRouting, hostingReel, tested: results.length }, null, 2));
   await browser.close();

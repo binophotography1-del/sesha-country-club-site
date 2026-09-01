@@ -5,7 +5,7 @@ This file is the operating guide for the Sesha Dasari event site.
 ## Current state
 
 • Source of truth: the `main` branch in the private GitHub repository.
-• Current release tag: `v0.3.17-two-tab-navigation`.
+• Current release tag: `v0.3.18-collaborator-handoff`.
 • Production site: https://sesha-country-club-site.netlify.app/
 • Netlify project: https://app.netlify.com/projects/sesha-country-club-site
 • Netlify Forms: https://app.netlify.com/projects/sesha-country-club-site/forms
@@ -35,7 +35,9 @@ GitHub access and Netlify access are separate. Abin needs both to own the full r
 Clone the private repository, enter its folder, and run:
 
 ```bash
-node server.mjs
+npm install
+npx playwright install chromium
+npm start
 ```
 
 Open `http://localhost:8798/`.
@@ -49,7 +51,7 @@ The local form stores valid development submissions in `data/inquiries.jsonl`. T
 3. Run the browser QA:
 
 ```bash
-node test-artifacts/transcript-qa.js
+npm test
 ```
 
 4. The QA script updates tracked screenshots. Restore them when the visual change does not require new reference images:
