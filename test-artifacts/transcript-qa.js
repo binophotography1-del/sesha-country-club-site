@@ -67,7 +67,7 @@ const { chromium } = require('playwright');
   await page.selectOption('#starter-service', 'dance');
   await Promise.all([
     page.waitForURL(/c-contact\.html\?/),
-    page.getByRole('button', { name: 'Continue my event brief' }).click()
+    page.getByRole('button', { name: 'Get a quote' }).click()
   ]);
   const starter = await page.evaluate(() => ({
     organization: document.querySelector('#organization').value,
