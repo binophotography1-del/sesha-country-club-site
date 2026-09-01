@@ -2,6 +2,17 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.12-hosting-youtube-reel
+
+Sesha hosting-reel release.
+
+• Replaces the pending Hosting-page video frame with Sesha's supplied YouTube Short.
+• Uses an approved local red-carpet image as a stable preview rather than embedding YouTube scripts.
+• Opens the Short in a new tab and labels the destination for screen-reader users.
+• Keeps the existing Instagram interview sample as a separate proof link.
+
+Tested surfaces: public YouTube response, desktop and mobile preview layout, external-link attributes, navigation, image loading, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.11-form-cta-routing
 
 Inquiry-flow routing release.

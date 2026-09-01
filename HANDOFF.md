@@ -5,7 +5,7 @@ This file is the operating guide for the Sesha Dasari event site.
 ## Current state
 
 • Source of truth: the `main` branch in the private GitHub repository.
-• Current release tag: `v0.3.11-form-cta-routing`.
+• Current release tag: `v0.3.12-hosting-youtube-reel`.
 • Production site: https://sesha-country-club-site.netlify.app/
 • Netlify project: https://app.netlify.com/projects/sesha-country-club-site
 • Netlify Forms: https://app.netlify.com/projects/sesha-country-club-site/forms
@@ -146,7 +146,7 @@ For a production rollback, use the Netlify Deploys page to publish the last know
 
 ## Open items
 
-• Replace the Comedy and Hosting reel placeholders after Sesha supplies durable public video links or approved hosted files.
+• Replace the Comedy reel placeholders after Sesha supplies durable public video links or approved hosted files.
 • Confirm whether Abin already combined Rick's three comedy clips before creating a second edit.
 • Replace the Abin Thomas, Yuvhan Suresh, and Jai headshot placeholders after approved portraits arrive. Confirm Jai's preferred full name before expanding his public label.
 • Connect GitHub to Netlify if the team wants automatic deploys after merges.

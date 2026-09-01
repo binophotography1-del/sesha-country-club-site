@@ -61,6 +61,7 @@ The homepage starter does not store a lead by itself. It hands the visitor to th
 
 • Approved public link for Rick's comedy reel.
 • Approved public dance reel for Yuvhan and Abin.
+• Approved public hosting reel for Sesha.
 • Approved replacement image for the Yuvhan and Abin Team card.
 • Approved replacement image for the second Team-page proof frame.
 • Approved photography and video portfolio links for Charlie, Ashwin, and Abin.
@@ -100,7 +101,7 @@ The live site uses work-focused assets from the Sesha, Abin, and Sidd group chat
 • Ashwin performing a DJ set.
 • Abin holding a professional camera.
 
-Other celebrity and networking selfies were reviewed but excluded. Large `.mov` files remain off the site. The hosting page links the public Instagram reel shared in the chat.
+Other celebrity and networking selfies were reviewed but excluded. Large `.mov` files remain off the site. The hosting page links the public YouTube Short and Instagram interview reel supplied by Sesha.
 
 ## Run
 

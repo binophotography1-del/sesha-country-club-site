@@ -74,6 +74,17 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
     action: document.querySelector('.home-quote-form').getAttribute('action')
   }));
 
+  await page.goto('http://127.0.0.1:8798/service-hosting.html', { waitUntil: 'networkidle' });
+  const hostingReel = await page.evaluate(() => {
+    const link = document.querySelector('a[href="https://youtube.com/shorts/qSvW5weyFE4"]');
+    return {
+      present: Boolean(link),
+      target: link?.getAttribute('target'),
+      rel: link?.getAttribute('rel'),
+      imageLoaded: Boolean(link?.querySelector('img')?.complete && link.querySelector('img').naturalWidth)
+    };
+  });
+
   await page.goto('http://127.0.0.1:8798/service-dance.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/service-dance.png', fullPage: true });
   await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
@@ -81,7 +92,7 @@ const { chromium } = require('/Users/siddchauhan/.cache/codex-runtimes/codex-pri
 
   const pagesWithoutCurrentNav = new Set(['c-services.html', 'c-team.html']);
   const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== (pagesWithoutCurrentNav.has(item.path) ? 0 : 1));
-  console.log(JSON.stringify({ failures, filter, form, starter, ctaRouting, homeRouting, tested: results.length }, null, 2));
+  console.log(JSON.stringify({ failures, filter, form, starter, ctaRouting, homeRouting, hostingReel, tested: results.length }, null, 2));
   await browser.close();
-  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance' || starter.hash !== '#event-brief' || !starter.formTarget || ctaRouting.some((item) => !item.allReachForm) || homeRouting.hero !== '#home-event-brief' || !homeRouting.starterTarget || homeRouting.action !== 'c-contact.html#event-brief') process.exit(1);
+  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance' || starter.hash !== '#event-brief' || !starter.formTarget || ctaRouting.some((item) => !item.allReachForm) || homeRouting.hero !== '#home-event-brief' || !homeRouting.starterTarget || homeRouting.action !== 'c-contact.html#event-brief' || !hostingReel.present || hostingReel.target !== '_blank' || hostingReel.rel !== 'noreferrer' || !hostingReel.imageLoaded) process.exit(1);
 })();
