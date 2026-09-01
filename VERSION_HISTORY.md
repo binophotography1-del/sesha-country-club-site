@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.19-services-dropdown
+
+Progressive-disclosure navigation release.
+
+• Keeps Services and Contact Us as the two main navigation choices.
+• Reveals All Services, Comedy, Dance, Visuals, Music, and Hosting on Services hover or activation.
+• Adds native button semantics, expanded state, visible focus, Escape handling, click-away dismissal, and 44-pixel targets.
+• Marks the matching service page inside the dropdown for orientation.
+• Preserves service-aware Contact Us links and the full Services page.
+
+Tested surfaces: hover reveal, click activation, keyboard activation, Escape dismissal and focus return, current-page state, 50 responsive page checks, mobile overflow, service filtering, form handoff, service-specific CTA routing, production packaging, and live deployment.
+
 ## v0.3.18-collaborator-handoff
 
 Portable collaborator setup release.

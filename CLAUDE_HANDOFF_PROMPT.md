@@ -13,7 +13,7 @@ Production:
 https://sesha-country-club-site.netlify.app/
 
 Current stable source tag:
-`v0.3.18-collaborator-handoff`
+`v0.3.19-services-dropdown`
 
 ## Before starting
 

@@ -1,6 +1,6 @@
 {
   "name": "sesha-country-club-site",
-  "version": "0.3.18",
+  "version": "0.3.19",
   "private": true,
   "description": "Country-club and private-event booking site for Sesha Dasari",
   "scripts": {

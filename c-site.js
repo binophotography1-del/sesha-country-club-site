@@ -1,4 +1,64 @@
 (() => {
+  const servicesLink = document.querySelector('.site-top nav > a[href="c-services.html"]');
+  if (servicesLink) {
+    const menu = document.createElement('div');
+    menu.className = 'services-menu';
+
+    const toggle = document.createElement('button');
+    toggle.className = 'services-menu-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', 'services-subnav');
+    toggle.setAttribute('aria-haspopup', 'true');
+    toggle.innerHTML = 'Services <span aria-hidden="true">⌄</span>';
+
+    const subnav = document.createElement('div');
+    subnav.className = 'services-subnav';
+    subnav.id = 'services-subnav';
+    subnav.setAttribute('aria-label', 'Service pages');
+
+    const servicePages = [
+      ['All Services', 'c-services.html'],
+      ['Comedy', 'service-comedy.html'],
+      ['Dance', 'service-dance.html'],
+      ['Visuals', 'service-media.html'],
+      ['Music', 'service-music.html'],
+      ['Hosting', 'service-hosting.html']
+    ];
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    servicePages.forEach(([label, href]) => {
+      const link = document.createElement('a');
+      link.href = href;
+      link.textContent = label;
+      if (currentPage === href) link.setAttribute('aria-current', 'page');
+      subnav.append(link);
+    });
+
+    menu.append(toggle, subnav);
+    servicesLink.replaceWith(menu);
+
+    const closeMenu = () => {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    toggle.addEventListener('click', () => {
+      const willOpen = !menu.classList.contains('is-open');
+      menu.classList.toggle('is-open', willOpen);
+      toggle.setAttribute('aria-expanded', String(willOpen));
+    });
+
+    menu.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      closeMenu();
+      toggle.focus();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!menu.contains(event.target)) closeMenu();
+    });
+  }
+
   const filterButtons = [...document.querySelectorAll('[data-filter]')];
   const cards = [...document.querySelectorAll('[data-category]')];
   const filterStatus = document.querySelector('#filter-status');

@@ -42,6 +42,25 @@ const { chromium } = require('playwright');
   await page.screenshot({ path: 'test-artifacts/c-contact-transcript.png', fullPage: true });
 
   await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
+  const servicesToggle = page.locator('.services-menu-toggle');
+  const servicesSubnav = page.locator('.services-subnav');
+  const progressiveNav = {
+    directItems: await page.locator('.site-top nav > *').count(),
+    toggleLabel: (await servicesToggle.innerText()).trim(),
+    initialExpanded: await servicesToggle.getAttribute('aria-expanded'),
+    serviceLinks: await servicesSubnav.locator('a').allTextContents()
+  };
+  await servicesToggle.hover();
+  await page.waitForTimeout(220);
+  progressiveNav.hoverVisible = await servicesSubnav.evaluate((element) => getComputedStyle(element).visibility === 'visible');
+  await page.mouse.move(0, 500);
+  await servicesToggle.focus();
+  await servicesToggle.press('Enter');
+  progressiveNav.clickExpanded = await servicesToggle.getAttribute('aria-expanded');
+  progressiveNav.clickVisible = await servicesSubnav.evaluate((element) => getComputedStyle(element).visibility === 'visible');
+  await servicesToggle.press('Escape');
+  progressiveNav.escapeExpanded = await servicesToggle.getAttribute('aria-expanded');
+  progressiveNav.focusRestored = await servicesToggle.evaluate((element) => document.activeElement === element);
   await page.fill('#starter-organization', 'Sample Country Club');
   await page.fill('#starter-email', 'events@example.com');
   await page.fill('#starter-date', '2026-10-24');
@@ -90,17 +109,9 @@ const { chromium } = require('playwright');
   await page.goto('http://127.0.0.1:8798/index.html', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'test-artifacts/variation-c-transcript.png', fullPage: true });
 
-  const pagesWithoutCurrentNav = new Set([
-    'c-team.html',
-    'thanks.html',
-    'service-hosting.html',
-    'service-comedy.html',
-    'service-dance.html',
-    'service-media.html',
-    'service-music.html'
-  ]);
+  const pagesWithoutCurrentNav = new Set(['c-team.html', 'thanks.html']);
   const failures = results.filter((item) => item.status !== 200 || item.h1 !== 1 || item.overflow || item.brokenImages || item.emptyLinks || item.currentNav !== (pagesWithoutCurrentNav.has(item.path) ? 0 : 1));
-  console.log(JSON.stringify({ failures, filter, form, starter, ctaRouting, homeRouting, hostingReel, tested: results.length }, null, 2));
+  console.log(JSON.stringify({ failures, progressiveNav, filter, form, starter, ctaRouting, homeRouting, hostingReel, tested: results.length }, null, 2));
   await browser.close();
-  if (failures.length || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance' || starter.hash !== '#event-brief' || !starter.formTarget || ctaRouting.some((item) => !item.allReachForm) || homeRouting.hero !== '#home-event-brief' || !homeRouting.starterTarget || homeRouting.action !== 'c-contact.html#event-brief' || !hostingReel.present || hostingReel.target !== '_blank' || hostingReel.rel !== 'noreferrer' || !hostingReel.imageLoaded) process.exit(1);
+  if (failures.length || progressiveNav.directItems !== 2 || progressiveNav.toggleLabel !== 'Services ⌄' || progressiveNav.initialExpanded !== 'false' || progressiveNav.serviceLinks.join('|') !== 'All Services|Comedy|Dance|Visuals|Music|Hosting' || !progressiveNav.hoverVisible || progressiveNav.clickExpanded !== 'true' || !progressiveNav.clickVisible || progressiveNav.escapeExpanded !== 'false' || !progressiveNav.focusRestored || filter.visible !== 2 || filter.pressed !== 'true' || form.selected !== 'dance' || form.controls !== form.labeled || starter.organization !== 'Sample Country Club' || starter.email !== 'events@example.com' || starter.eventDate !== '2026-10-24' || starter.service !== 'dance' || starter.hash !== '#event-brief' || !starter.formTarget || ctaRouting.some((item) => !item.allReachForm) || homeRouting.hero !== '#home-event-brief' || !homeRouting.starterTarget || homeRouting.action !== 'c-contact.html#event-brief' || !hostingReel.present || hostingReel.target !== '_blank' || hostingReel.rel !== 'noreferrer' || !hostingReel.imageLoaded) process.exit(1);
 })();
