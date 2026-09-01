@@ -13,7 +13,7 @@
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'services-subnav');
     toggle.setAttribute('aria-haspopup', 'true');
-    toggle.innerHTML = 'Services <span aria-hidden="true">⌄</span>';
+    toggle.innerHTML = 'Services <span aria-hidden="true"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-left:4px"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
 
     const subnav = document.createElement('div');
     subnav.className = 'services-subnav';
@@ -22,11 +22,9 @@
 
     const servicePages = [
       ['All Services', 'c-services.html'],
-      ['Comedy', 'service-comedy.html'],
-      ['Dance', 'service-dance.html'],
-      ['Visuals', 'service-media.html'],
-      ['Music', 'service-music.html'],
-      ['Hosting', 'service-hosting.html']
+      ['Live Entertainment', 'c-services.html#entertainment'],
+      ['Media', 'c-services.html#media'],
+      ['Workshops', 'c-services.html#workshops']
     ];
     const currentPage = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
     servicePages.forEach(([label, href]) => {
