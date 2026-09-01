@@ -2,6 +2,15 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.14-remove-hero-label
+
+Homepage hero simplification release.
+
+• Removes the small audience label above the homepage headline.
+• Preserves the main headline, supporting copy, hero image, and starter-form CTA.
+
+Tested surfaces: desktop and mobile hero spacing, deleted label, headline text, image loading, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.13-custom-entertainment-headline
 
 Homepage headline release.
