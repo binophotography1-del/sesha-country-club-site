@@ -1,5 +1,8 @@
 (() => {
-  const servicesLink = document.querySelector('.site-top nav > a[href="c-services.html"]');
+  const servicesLink = [...document.querySelectorAll('.site-top nav > a')].find((link) => {
+    const pathname = new URL(link.href, window.location.href).pathname.replace(/\/$/, '');
+    return pathname.endsWith('/c-services') || pathname.endsWith('/c-services.html');
+  });
   if (servicesLink) {
     const menu = document.createElement('div');
     menu.className = 'services-menu';
@@ -25,12 +28,12 @@
       ['Music', 'service-music.html'],
       ['Hosting', 'service-hosting.html']
     ];
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = (window.location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
     servicePages.forEach(([label, href]) => {
       const link = document.createElement('a');
       link.href = href;
       link.textContent = label;
-      if (currentPage === href) link.setAttribute('aria-current', 'page');
+      if (currentPage === href.replace(/\.html$/, '')) link.setAttribute('aria-current', 'page');
       subnav.append(link);
     });
 

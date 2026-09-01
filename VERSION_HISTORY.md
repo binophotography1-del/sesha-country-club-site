@@ -2,6 +2,16 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.20-netlify-dropdown-routing
+
+Netlify navigation compatibility release.
+
+• Recognizes both local `.html` routes and Netlify's extensionless production routes when initializing Services.
+• Preserves current-page orientation inside the dropdown on both route formats.
+• Keeps the v0.3.19 interaction and accessibility behavior unchanged.
+
+Tested surfaces: local browser regression, Netlify production initialization, desktop hover, mobile activation, dropdown destinations, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.19-services-dropdown
 
 Progressive-disclosure navigation release.
