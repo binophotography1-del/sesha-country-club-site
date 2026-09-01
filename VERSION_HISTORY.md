@@ -2,6 +2,16 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.13-custom-entertainment-headline
+
+Homepage headline release.
+
+• Replaces the member-programming headline with “Custom Entertainment and Creative Services.”
+• Keeps the country-club audience callout and coordinated-team subhead.
+• Preserves the homepage starter-form CTA and Sesha/Scarlett hero image.
+
+Tested surfaces: desktop, tablet, and mobile hero wrapping, headline text, homepage form anchor, navigation, image loading, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.12-hosting-youtube-reel
 
 Sesha hosting-reel release.

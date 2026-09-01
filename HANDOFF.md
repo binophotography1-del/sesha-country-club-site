@@ -5,7 +5,7 @@ This file is the operating guide for the Sesha Dasari event site.
 ## Current state
 
 • Source of truth: the `main` branch in the private GitHub repository.
-• Current release tag: `v0.3.12-hosting-youtube-reel`.
+• Current release tag: `v0.3.13-custom-entertainment-headline`.
 • Production site: https://sesha-country-club-site.netlify.app/
 • Netlify project: https://app.netlify.com/projects/sesha-country-club-site
 • Netlify Forms: https://app.netlify.com/projects/sesha-country-club-site/forms
