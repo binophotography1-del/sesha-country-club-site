@@ -127,4 +127,6 @@ Submitted leads appear in `data/inquiries.jsonl` after the first valid request.
 
 `scripts/package-netlify.sh` creates the curated production directory configured by `netlify.toml`. It includes only the selected public pages, scripts, styles, headers, and approved assets.
 
+Use GitHub branches and pull requests for work in progress. Preview and test changes on localhost. Batch approved changes into one release and send only that final release to Netlify production. Do not create Netlify preview deploys for routine edits, and do not connect automatic deployment to every GitHub push.
+
 Production: `https://sesha-country-club-site.netlify.app/`

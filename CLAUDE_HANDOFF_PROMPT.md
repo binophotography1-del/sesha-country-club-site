@@ -124,7 +124,7 @@ git status
 ```
 
 10. Summarize what changed, what passed, and any unverified claims or missing assets.
-11. Do not deploy or merge until the team approves the preview.
+11. Do not deploy or merge until the team approves the localhost preview and GitHub diff.
 
 Commit after approval:
 
@@ -138,9 +138,13 @@ Send the branch or pull-request link to Sidd, Sesha, and Abin for review.
 
 ## Deployment rules
 
-• GitHub does not automatically deploy to Netlify.
+• GitHub holds every source change, branch, review, and approved merge.
+• Use localhost and GitHub screenshots or pull-request diffs for work-in-progress review.
+• Do not create Netlify preview deploys for routine edits.
+• Do not deploy each small approved change separately. Batch approved changes into one release.
+• Keep automatic GitHub-to-Netlify deployment disabled. A GitHub push is not production approval.
 • Netlify access is separate from GitHub access.
-• Only deploy after the approved branch is merged into `main`.
+• Only deploy after the complete approved release batch is merged into `main`.
 • Package with:
 
 ```bash
@@ -159,6 +163,8 @@ Production deploy:
 ```bash
 npx --yes netlify-cli@latest deploy --prod --no-build --dir netlify-dist --message "Describe the release" --json
 ```
+
+Do not run `netlify deploy` without `--prod`. The goal is one final production deploy, not a preview-deploy trail.
 
 After deployment:
 

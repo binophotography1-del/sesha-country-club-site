@@ -72,7 +72,18 @@ git diff
 
 ## Production deployment
 
-The GitHub repository does not currently trigger automatic Netlify deployments. Deploy from an authenticated terminal after merging `main`.
+GitHub holds all source changes, reviews, and history. Localhost handles previews and QA. Do not use Netlify for work-in-progress previews or one deploy per small edit.
+
+Release sequence:
+
+1. Make each change on a GitHub branch.
+2. Preview on localhost and run `npm test`.
+3. Push the branch and review the diff or pull request in GitHub.
+4. Batch all approved changes into one final release.
+5. Merge the approved batch into `main`.
+6. Package and send one production deploy to Netlify.
+
+Keep automatic GitHub-to-Netlify deployment disabled. A push to GitHub is not production approval.
 
 First-time setup:
 
@@ -87,6 +98,8 @@ Package and deploy:
 bash scripts/package-netlify.sh
 npx --yes netlify-cli@latest deploy --prod --no-build --dir netlify-dist --message "Describe the release" --json
 ```
+
+Do not run `netlify deploy` without `--prod`. Do not run the production command until the release batch is approved. If a deployment result is uncertain, inspect the Netlify Deploys page before attempting another deployment.
 
 After deployment:
 
@@ -151,7 +164,6 @@ For a production rollback, use the Netlify Deploys page to publish the last know
 • Replace the Comedy reel placeholders after Sesha supplies durable public video links or approved hosted files.
 • Confirm whether Abin already combined Rick's three comedy clips before creating a second edit.
 • Replace the Abin Thomas, Yuvhan Suresh, and Jai headshot placeholders after approved portraits arrive. Confirm Jai's preferred full name before expanding his public label.
-• Connect GitHub to Netlify if the team wants automatic deploys after merges.
 • Connect a custom domain when the team selects one.
 • Confirm the Netlify notification email reaches Sesha outside the test environment.
 • Close the image-rights and public-link approvals listed in `README.md`.
