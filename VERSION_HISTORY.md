@@ -2,6 +2,15 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.16-contact-us-cta
+
+Homepage CTA label release.
+
+• Renames the homepage hero button from “Plan a member event” to “Contact Us.”
+• Preserves the button's link to the homepage starter form.
+
+Tested surfaces: desktop and mobile button rendering, form-anchor routing, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.15-trim-hero-copy
 
 Homepage hero copy simplification release.
