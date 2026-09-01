@@ -2,6 +2,18 @@
 
 This repository starts with honest source checkpoints. The labels below do not claim earlier Git history that never existed.
 
+## v0.3.17-two-tab-navigation
+
+Navigation and hero-copy release.
+
+• Consolidates Comedy, Dance, Visuals, Music, and Hosting under one Services tab.
+• Renames the global Inquiry tab to Contact Us.
+• Applies the two-item navigation across the homepage, services, team, contact, individual service, and confirmation pages.
+• Updates the homepage hero copy with Sesha's role in talent, event customization and pricing, and scheduling.
+• Preserves contextual service selection when visitors contact Sesha from a service page.
+
+Tested surfaces: global navigation labels and destinations, contextual contact links, homepage copy, desktop and mobile layouts, responsive overflow, production packaging, and live deployment.
+
 ## v0.3.16-contact-us-cta
 
 Homepage CTA label release.
